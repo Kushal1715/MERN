@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+</head>
+<body>
+    <script>
+        let principle = Number(window.prompt("Enter the principle:"));
+        //parseInt(); //converts into integer
+        //+"1010" //converts into number
+        let time = window.prompt("Enter time:");
+        let rate = window.prompt("Enter rate:");
+
+        let SI = (principle*time*rate)/100;
+        let amount = principle + SI;
+
+        // document.write("The simple interest is: "+SI);
+        document.write(`The amount is ${amount} when principle is ${principle} , time is ${time} and amount is ${amount}`); //template literals
+    </script>
+</body>
+</html>

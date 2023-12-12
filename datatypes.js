@@ -58,6 +58,12 @@
 // console.log(arr1);
 // console.log(arr2);
 
+
+// let arr1 =  [1,2,3];
+// let arr2 = [...arr1]; //Spread Operator
+// arr2.push(4);
+// console.log(arr1);
+// console.log(arr2);
 // non-primitive data types cant be stored in callstack so heap memory is used
 
 

@@ -57,14 +57,11 @@
 //College is closed on holidays
 
 let clzTime = 10;
-let weekend = false;
+let weekend = true;
 let holiday = false;
 
 
-if(weekend || holiday){
-    console.log(`College is close`);
-
-}else if(clzTime >= 10 && clzTime <= 17){
+if(clzTime >= 10 && clzTime <= 17 && !holiday && !weekend){
     console.log(`College is open`);
 }
 else{

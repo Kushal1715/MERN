@@ -45,8 +45,7 @@
 // let lastName = "error";
 // let username;
 // if(!username){
-//     username = prompt("Enter your username");
-// }
+//     username = prompt("Enter your useru
 // document.write(`Welcome ${username}`);
 
 
@@ -56,14 +55,66 @@
 //College closed on weekend
 //College is closed on holidays
 
-let clzTime = 10;
-let weekend = true;
-let holiday = false;
+// let clzTime = 10;
+// let weekend = true;
+// let holiday = false;
 
 
-if(clzTime >= 10 && clzTime <= 17 && !holiday && !weekend){
-    console.log(`College is open`);
-}
-else{
-    console.log(`College is close`);
-}
+// if(clzTime < 10 || clzTime > 17 || holiday || weekend){
+//     console.log(`College is close`);
+// }
+// else{
+//     console.log(`College is open`);
+// }
+
+// 5. Special Operator  
+// a. Ternary Operator: It is a short hand operator used instead of if-else statement
+// Syntax:
+// condition?condition if true: condition if false 
+// Eg:
+// let age = 2;
+// // age>= 18 ? console.log("You can vote") : console.log("You cannot vote")
+// let message = age>= 18 ? "You can vote" : "You cannot vote";
+// console.log(message);
+
+// Nested Ternary Operator
+// Syntax: condition?condition?"true statement":"false statement":"statement if initial condition is false"
+// Eg: 
+// let age = 18;
+// let isFemale = true;
+// let message2 = age >= 18 ? isFemale ? "Free drink" : "no free drink" : "no clubbing";
+// console.log(message2);
+
+
+// b. Nullish Coelscing Operator:
+// If LHS value or expression is null or undefined , the RHS will be executed.
+// let username;
+// username??console.log("Please enter your username.");
+
+//c. Unary Operator:
+// Those operators which can carry out operations on single operands are called unary operators.
+// i) Increment Operator(++):
+// ii) Decrement Operator(--);
+
+// iii) Unary +
+// let x = "5";
+// console.log(+x); //5
+
+// iv) Unary - or Negation Operator
+// let x = 5;
+// console.log(-x);  -5
+
+// v) typeof Operator
+// console.log(NaN); //number
+//NaN is also a number
+
+
+//POSTFIX and PREFIX
+// let x = 5;
+// let y = ++x; 
+// console.log(x); //6
+// console.log(y); //6
+// console.log(x++);
+// console.log(++x);
+// console.log(x);
+

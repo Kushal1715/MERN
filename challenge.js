@@ -20,18 +20,13 @@ let heightOfMark = 1.69;
 let massOfJohn = 92;
 let heightOfJohn = 1.95;
 
-let  markBMI = massOfMark / (heightOfMark * heightOfMark);
+const markHigherBMI = (massOfMark, heightOfMark, massOfJohn, heightOfJohn)=>{
+   let  markBMI = massOfMark / (heightOfMark * heightOfMark);
 let johnBMI = massOfJohn / (heightOfJohn * heightOfJohn);
-console.log(markBMI);
-console.log(johnBMI);
-
-
-
-const markHigherBMI = (markBMI,johnBMI)=>{
    let markHighersBMI = markBMI > johnBMI;
    console.log(markHighersBMI);
 }
-markHigherBMI(markBMI,johnBMI);
+markHigherBMI(massOfMark,heightOfMark, massOfJohn, heightOfJohn);
 
 
 
@@ -65,7 +60,8 @@ markHigherBMI(markBMI,johnBMI);
 // return markBMI > johnBMI ? console.log(`Mark's BMI (${markBMI.toFixed(2)}) is higher than John's (${johnBMI.toFixed(2)})`) : console.log(`John's BMI (${johnBMI.toFixed(2)}) is higher than Mark's (${markBMI.toFixed(2)})`);
 
 // }
-
+let  markBMI = massOfMark / (heightOfMark * heightOfMark);
+let johnBMI = massOfJohn / (heightOfJohn * heightOfJohn);
 const higherBMI = (markBMI,johnBMI)=>{
    return markBMI > johnBMI ? console.log(`Mark's BMI (${markBMI.toFixed(2)}) is higher than John's (${johnBMI.toFixed(2)})`) : console.log(`John's BMI (${johnBMI.toFixed(2)}) is higher than Mark's (${markBMI.toFixed(2)})`);
 }

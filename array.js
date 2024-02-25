@@ -214,14 +214,187 @@
 // let newStudents = students.sort().map((e, i) => `Roll No.: ${i + 1} ${e}`);
 // console.log(newStudents);
 
-// ktm temperature (deg Celcius) this week has been 
+// ktm temperature (deg Celcius) this week has been
 
-let ktmTempInCe = [17, 10, 3, 5, 23, 10, 12];
+// let ktmTempInCe = [17, 10, 3, 5, 23, 10, 12];
 
-// conver into fahrenheit 
+// // conver into fahrenheit
 
-let tempInFah = ktmTempInCe.map(temp => (temp * 1.8) + 32);
-console.log(tempInFah);
+// let tempInFah = ktmTempInCe.map(temp => (temp * 1.8) + 32);
+// console.log(tempInFah);
+
+// 2. Filter:
+// this is an array method that is used to filter individual elements from an array. This method returns a new array.
+
+// Syntax:
+// // array.filter((element,index,arr)=>{
+//   return condition;
+// })
+
+// In the callback function of this method a condition is initialized and based on the condition the elements are added(filtered) in the new array returned by this method.
+
+// if the condition is true element is added and if the condition is false the elelment wont be added.
+
+// let numbers = [10, 4, 38, 4893, 6, 27, 2, 1, 4];
+
+// // let greaterThanFive = numbers.filter((num) => {
+// //   return num > 5;
+// // })
+// // console.log(greaterThanFive);
+
+// let oddNumbers = numbers.filter((num) => {
+//   return num % 2 != 0
+// })
+// let evenIndex = numbers.filter((_, index) => {
+//   return index % 2 === 0;
+// })
+// console.log(oddNumbers)
+// console.log(evenIndex);
+
+// a survey was done in a community where the monthly salary of the household was recorded. The data collected from the survey is as follows:
+
+// let salaries = [17000, 25000, 35000, 50000, 23000, 455000, 99990, 29290, 4500, 7800, 75800, 14500];
+
+// the government has defined the minimum salary as 17500, find out how many people from the survey are getting below average salary.
+
+
+
+// console.log(`Out of ${salaries.length} people ${avgSalary.length} are getting below average salary`
+// );
+
+// salary x is y% less than minimum salary
+
+// let avgSalary = salaries.filter((salary) => {
+//   return salary < 17500;
+// })
+
+// let minimumPercentage = salaries.filter((salary) => salary < 17500).map((sal) => `${sal} is ${100 - (sal / 17500) * 100}% less than minimum salary`);
+
+// console.log(minimumPercentage);
+
+// 3. reduce method:
+// Reduce is the method that can return any type of value. (either primitive or non-primitive). It will reduce all elements in an array into a single value.
+
+// Unlike map and filter this method has two argument:
+// 1. callback function
+// 2. intitial value of accumulator
+
+// the callback function in this method has four parameters
+// 1. accumulator: output of reduced method is stored in accumulator
+// 2. current element
+// 3. index
+// 4. ARRAY
+
+// example
+// let numbers = [3, 45, 23, 5, 2, 1];
+
+// let overallSum = numbers.reduce((out, num) => out + num)
+// console.log(overallSum);
+
+// // task
+// let salaries = [1, 2, 3, 4];
+// let avgSalary = salaries.reduce((acc, num) =>
+//   acc + num
+// ) / salaries.length;
+
+// console.log(avgSalary);
+
+// let salaries = [17000, 25000, 35000, 50000, 23000, 455000, 99990, 29290, 4500, 7800, 75800, 14500];
+
+
+// let minimumPercentage = salaries.reduce((acc, salary) => {
+//   salary < 17500 && acc.push(`${salary} is ${100 - (salary / 17500 * 100).toFixed(3)}% less than minimum salary`);
+//   return acc;
+// }, [])
+// console.log(minimumPercentage);
+
+//convert word into array
+// let word = 'apple'
+// let arrletter = [...word];
+// console.log(arrletter);
+
+// create a function that takes two parameter,word and letter respectively. the function should return the count letter present in the word
+
+// example output = letterCount(`apple`,'p') output : `There are 2 ps in the word apple `
+
+// let letterCount = (word, letter) => {
+//   let newWord = word.toLowerCase();
+//   let wordArr = [...newWord];
+//   let num = wordArr.reduce((acc, w) => {
+//     if (w === letter.toLowerCase()) {
+//       acc += 1;
+//     }
+//     return acc;
+//   }, 0)
+//   return `There ${num <= 1 ? 'is' : 'are'} ${num}${letter}${num <= 1 ? '' : `'s`} in the word ${word}`
+// }
+
+// console.log(letterCount('Pineapple', 'i'));
+
+
+// 3 ways to convert into an array :::::::
+
+//  1.  by using spread operator
+// let wordArr = [...word];
+
+// 2. by using split method
+// syntax
+// String.split(separator)
+// example:
+// let arrStr = Str.split('');
+// console.log(arrStr);
+
+// 3.
+// let Str = "hello world";
+
+// let newStr = Array.from(Str);
+// console.log(newStr);
+
+
+// let letterCount = (word, letter) => {
+//   let newWord = word.toLowerCase();
+//   let wordArr = [...newWord];
+//   let num = wordArr.reduce((acc, w) => {
+//     if (w === letter.toLowerCase()) {
+//       acc += 1;
+//     }
+//     return acc;
+//   }, 0)
+//   return `There ${num <= 1 ? 'is' : 'are'} ${num}${letter}${num <= 1 ? '' : `'s`} in the word ${word}`
+// }
+// console.log(letterCount('Pineapple', 'i'));
+
+// Array Destructuring:
+// It is a way to sequentially assign values from arrays to variables.
+
+// // example:
+// let [a, b, c] = [1, 2, 3];
+
+// // Rest parameters:
+// let [x, y, z, ...others] = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

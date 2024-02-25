@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // short circuting using logical operators
+      //It is the practice to write code to get required result based on behavior shown by logical operatots.
+
+      // using AND Operator:
+      // let age = 19;
+      // if(age >= 18){
+      //     console.log("Go to vote on Mangsir 30");
+      // }else{
+      //     // console.log(); //do nothing
+      // }
+
+      // age>=18 && console.log("Go to vote on Mangsir 30");
+
+      // Using OR operator:
+      let firstName = "Ram";
+      let lastName = "Thapa";
+      let username;
+
+      // // displaying username on screen
+      // if(username){
+      //     document.write(`Welcome ${firstName}`);
+      // }else{
+      //     document.write(`Welcome ${firstName}${lastName} ${Date.now()}`);
+      // }
+
+      username = username || `Welcome ${firstName} ${lastName} ${Date.now()}`;
+      document.write(username);
+
+      // and operator is used in shortCircuiting when only if condition is knowon
+    </script>
+  </body>
+</html>

@@ -28,9 +28,9 @@
 
 //var vs let vs const
 //var - var is used to declare variable which value can or any change overtime in our program.
-//2. Variable decaration only possible in var.(eg. var firstName;)
-//var firstName; // value Decelaration 
-//firstName = "Kushal"; // value assign  
+//2. Variable decaration is possible in var.(eg. var firstName;)
+//var firstName; // value Decelaration
+//firstName = "Kushal"; // value assign
 //3. Variable re-decleration is possible in var.
 //4. Variables declared with var are hoisted.
 // Hoisting (only in var)
@@ -42,8 +42,8 @@
 //5. Var is function scope.
 
 //let - let is used to declare variable which value can or any change overtime in our program.
-//2. Variable decaration only possible in let. (eg. let lastName;)
-//let lastName; // value decelaration 
+//2. Variable decaration is possible in let. (eg. let lastName;)
+//let lastName; // value decelaration
 //lastName = "Khadka"; //value assign
 //3. Variable re-decleration is not possible in let.
 //4. Variables declared with let are not hoisted.

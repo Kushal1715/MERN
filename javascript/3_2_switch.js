@@ -14,7 +14,7 @@
 //         break
 //     default:
 //         statement to be executed if no match found for any cases above
-        
+
 // }
 
 // let currentLight = "GREEN";
@@ -41,27 +41,27 @@
 // F
 
 let totalMarks = 500;
-let obtainMarks = 320;
+let obtainMarks = 500;
 let percentage = (obtainMarks / totalMarks) * 100;
 console.log(percentage);
 
 // arguments in switch case should exactly match the case result to perform the output 
 
-function checkGrade(percentage){
-    switch(true){
+function checkGrade(percentage) {
+    switch (true) {
         case percentage >= 90:
             console.log("A+");
             break;
-        case percentage >=80:
+        case percentage >= 80:
             console.log("A");
             break;
-        case percentage >=70:
+        case percentage >= 70:
             console.log("B+");
             break;
-        case percentage >=60:
+        case percentage >= 60:
             console.log("B");
             break;
-        case percentage >=50:
+        case percentage >= 50:
             console.log("C+");
             break;
         default:

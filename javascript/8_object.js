@@ -168,20 +168,48 @@ function BankAccount(firstName, lastName, accountNo, currentBalance) {
   this.last_name = lastName
   this.account_no = accountNo
   this.current_balance = currentBalance
+  this.transaction = []
   this.fundDeposit = (depositAmount) => {
     totalAmount = depositAmount + currentBalance;
+    this.transaction.push({
+      type: 'deposit',
+      amount: depositAmount,
+      time: Date.now()
+    })
     console.log(`Dear ${firstName}, Your ${accountNo} Credited by NPR ${depositAmount}, Your new balance is ${totalAmount}`);
   }
   this.fundWithdrawal = (withDrawAmount) => {
     if (currentBalance > withDrawAmount) {
       totalAmount = totalAmount - withDrawAmount;
       console.log(`Dear ${firstName}, Your ${accountNo} Debited by NPR ${withDrawAmount}, Your new balance is ${totalAmount}`);
+      this.transaction.push({
+        type: 'withdrawal',
+        amount: withDrawAmount,
+        time: Date.now()
+      })
     } else {
       console.log("No sufficient balance in your account");
     }
   }
+
+  this.depositsCheck = () => {
+    return this.transaction.filter((element) => {
+      return element.type === 'deposit';
+    })
+  }
+
+  this.withdrawalCheck = () => {
+    return this.transaction.filter((element) => {
+      return element.type === 'withdrawal';
+    })
+  }
 }
+
+
 
 const Person = new BankAccount('Kushal', 'Khadka', 345235432, 15000);
 Person.fundDeposit(10000);
 Person.fundWithdrawal(2000);
+console.log(Person);
+console.log(Person.depositsCheck());
+console.log(Person.withdrawalCheck());

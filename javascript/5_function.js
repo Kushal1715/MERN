@@ -1,5 +1,5 @@
 // Function:
-// A function is basically a block o code that can execute a specific task. The value or action
+// A function is basically a block of code that can execute a specific task. The value or action
 // performed by a function can be achieved when we call or invoke a function. A function consist of a
 // function name(to write function names we have to follow the rules of writing identifiers)
 //  A function contains a paranthesis where parameteres can be contained
@@ -10,7 +10,7 @@
 // 3) Arrow Function(ES6+)
 
 // 1) Function Declaration
-// // They are hoisted 
+// // They are hoisted
 // let namee = "Zzzzzzzzz";
 
 // greeting(namee); //This is valid because function declaration are hoisted
@@ -27,7 +27,7 @@
 // }
 // console.log(calcAge(2001));
 
-// function without the return key gives undefined 
+// function without the return key gives undefined
 // code below return key inside the function are not executed
 
 
@@ -43,7 +43,7 @@
 // let result = canVote(21);
 // console.log(result);
 
-// Create a function that return if you are/were or will be 16 years old. 
+// Create a function that return if you are/were or will be 16 years old.
 
 // function checkSixteen(age){
 //     // if(age === 16){
@@ -62,7 +62,7 @@
 // console.log(checkSixteen(19));
 
 // coding challenge 2,3
-// office open or close 
+// office open or close
 
 
 // 3) Arrow Function (ES6+)
@@ -74,7 +74,7 @@
 
 // KISS keep it simple and short
 
-// crate an arrow function that return sum of two number 
+// crate an arrow function that return sum of two number
 
 // const sum = (num1,num2) =>num1 + num2;
 

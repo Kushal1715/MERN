@@ -2,7 +2,7 @@
 //They are pre-defined signs and symbol that are designed to perform designated operations on operands.
 //1. Arithmetic Operators
 //Addition Operator
-// Subtraction Operator 
+// Subtraction Operator
 // Multiplication Operator
 // Division Operator
 // Modulo Operator(%)
@@ -12,16 +12,16 @@
 
 //Type Coercion Vs Type Conversion
 // Type Coercion: focefully changing the type of data against the developers will to prevent error
-// Type Conversion: changing the type of data according to the developers will 
-// Priority of Conversion: 
+// Type Conversion: changing the type of data according to the developers will
+// Priority of Conversion:
 //1)String
 //2)Number
 //3)Boolean
 
 //2.Comparison (Relational) Operator
-// 3. Assignment Operator 
-// 4. Logical Operator 
-// 5. Special Operator 
+// 3. Assignment Operator
+// 4. Logical Operator
+// 5. Special Operator
 
 // And operator checks for the falsy values if not prints the last expression Eg:
 // if("Ram"&&100&&2<10&&"kushal");  //output: kushal
@@ -30,7 +30,7 @@
 // if("Ram"||100||2<10||"kush")  //output Ram
 
 //TRUTHY vs FALSY:
-//there are 7 falsy values in JS, they are 0,-0, 0n, false, undefined, null, NaN, "".
+//there are 7 falsy values in JS, they are 0,-0, false, undefined, null, NaN, "".
 //Except these values all the values in JS are Truthy values.
 
 // if(0){
@@ -67,10 +67,10 @@
 //     console.log(`College is open`);
 // }
 
-// 5. Special Operator  
+// 5. Special Operator
 // a. Ternary Operator: It is a short hand operator used instead of if-else statement
 // Syntax:
-// condition?condition if true: condition if false 
+// condition?condition if true: condition if false
 // Eg:
 // let age = 2;
 // // age>= 18 ? console.log("You can vote") : console.log("You cannot vote")
@@ -79,7 +79,7 @@
 
 // Nested Ternary Operator
 // Syntax: condition?condition?"true statement":"false statement":"statement if initial condition is false"
-// Eg: 
+// Eg:
 // let age = 18;
 // let isFemale = true;
 // let message2 = age >= 18 ? isFemale ? "Free drink" : "no free drink" : "no clubbing";
@@ -110,11 +110,14 @@
 
 
 //POSTFIX and PREFIX
-// let x = 5;
-// let y = ++x; 
-// console.log(x); //6
-// console.log(y); //6
-// console.log(x++);
-// console.log(++x);
-// console.log(x);
+let x = 5;
+let y = ++x;
+console.log(x); //6
+console.log(y); //6
+console.log(x++);
+console.log(++x);
+console.log(++y)
+console.log(y++)
+console.log(x);
+console.log(y);
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      // Third party involvement: data exchange: asynchronous tasks
+      // Promise is an in built javascript object which can represent eventual completion or failure of any asynchronous operation. To overcome the drawbacks of using callback functions for asynchronous tasks, promises are used.
+      // Promises makes asynchronous work much more readable.
+      // Error handling is easier in promises.
+
+      // There are three major states in promises:
+      // i) pending
+      // ii) fulfilled/resolved
+      // iii) rejected
+
+      let news = [
+        {
+          title: "First title",
+          content: "First Content",
+        },
+        {
+          title: "Second title",
+          content: "Second Content",
+        },
+        {
+          title: "Third title",
+          content: "Third Content",
+        },
+      ];
+
+      const showNews = () => {
+        setTimeout(() => {
+          let result = "";
+          news.forEach((post) => {
+            result += `<li>${post.title}</li>`;
+            console.log(result);
+            document.querySelector("div").innerHTML = result;
+          });
+        }, 3000);
+      };
+
+      showNews();
+
+      // const addNews = (newNews) => {
+      //   setTimeout(() => {
+      //     news.push(newNews);
+      //   }, 2000);
+      // };
+
+      const addNews = (newNews) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            news.push(newNews);
+            let error = true;
+            if (error) {
+              reject({ message: "something went wrong" });
+            } else {
+              resolve();
+            }
+          }, 4000);
+        });
+      };
+
+      addNews({ title: "Fourth title", content: "Fourth Content" })
+        .then(showNews)
+        .catch((e) => alert(e.message));
+
+      // creating a promise is not done most of the time. Developers tens to work with pre existing promises. They either use libraries or methods that return a promise.
+      // For example: fetch method, axios(library)
+    </script>
+  </body>
+</html>

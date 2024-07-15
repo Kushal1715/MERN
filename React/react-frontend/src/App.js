@@ -1,10 +1,8 @@
-import First from './components/First.jsx'
+import HomePage from './Pages/HomePage.jsx';
 function App() {
   return (
     <div className="App">
-      <h1 >Hello world</h1>
-      <hr />
-      <First />
+      <HomePage />
     </div>
   );
 }

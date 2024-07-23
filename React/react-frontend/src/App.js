@@ -1,9 +1,7 @@
-import HomePage from './Pages/HomePage.jsx';
+import MyRoutes from './MyRoutes.js';
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <MyRoutes />
   );
 }
 

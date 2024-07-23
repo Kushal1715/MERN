@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "product_title": "product 1",
+    "product_image": "/image/img.jpg",
+    "product_price": 1200
+  },
+  {
+    "id": 2,
+    "product_title": "product 2",
+    "product_image": "/image/img1.jpg",
+    "product_price": 1300
+  },
+  {
+    "id": 3,
+    "product_title": "product 3",
+    "product_image": "/image/img3.jpg",
+    "product_price": 1400
+  },
+  {
+    "id": 4,
+    "product_title": "product 4",
+    "product_image": "/image/img4.jpg",
+    "product_price": 1600
+  },
+  {
+    "id": 5,
+    "product_title": "product 5",
+    "product_image": "/image/img5.jpg",
+    "product_price": 1500
+  }
+]

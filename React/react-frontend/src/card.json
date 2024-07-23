@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Kushal Khadka",
+    "level": "Bachelor",
+    "faculty": "BCA",
+    "img": "/id/myProfile.png",
+    "validDate": "2082-06-30"
+  },
+  {
+    "id": 2,
+    "name": "Yujan Ranjitkar",
+    "level": "Bachelor",
+    "faculty": "BBM",
+    "img": "/id/yujan.jpg",
+    "validDate": "2082-06-30"
+  },
+  {
+    "id": 3,
+    "name": "Rahul Shrestha",
+    "level": "Bachelor",
+    "faculty": "BCA",
+    "img": "/id/rahul2.jpg",
+    "validDate": "2082-06-30"
+  },
+  {
+    "id": 4,
+    "name": "Kushal Khadka",
+    "level": "Bachelor",
+    "faculty": "BCA",
+    "img": "/id/myProfile.png",
+    "validDate": "2082-06-30"
+  },
+  {
+    "id": 5,
+    "name": "Kushal Khadka",
+    "level": "Bachelor",
+    "faculty": "BCA",
+    "img": "/id/myProfile.png",
+    "validDate": "2082-06-30"
+  }
+]

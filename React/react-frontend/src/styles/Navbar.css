@@ -1,23 +1,32 @@
 .navbar{
-  width: 100%;
-  height: 80px;
+  padding: 10px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 100px;
-  background-color: rgb(82, 143, 155);
+  background-color: rgb(152, 148, 229);
   color: white;
+  height: 60px;
 }
 
-.list ul{
+.navbar .logo{
+  font-size: 22px;
+}
+
+.navbar .list{
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 60px;
   list-style: none;
 }
 
-.list ul a{
+
+.navbar .list a{
   text-decoration: none;
   color: white;
+  font-size: 20px;
 }
+
+/* .heroSection{
+  background-color: aqua;
+} */

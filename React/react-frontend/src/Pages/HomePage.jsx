@@ -1,14 +1,18 @@
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
+// import Carousel from "../components/Carousel";
+
+import Counter from "../components/Counter";
+import Drawer from "../components/Drawer";
+import DisplayIdCard from "../ui/DisplayIdCard";
+import DisplayProducts from "../ui/DisplayProducts";
 
 const HomePage = () => {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Footer />
-    </div>
+    <>
+      <Drawer />
+      <Counter />
+      <DisplayIdCard />
+      <DisplayProducts />;
+    </>
   );
 };
 

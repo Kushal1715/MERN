@@ -13,7 +13,7 @@ const MyRoutes = () => {
           <Route path='/' element={<MainLayout />}>
             <Route path='/' element={<HomePage />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/product-details' element={<ProductDetails />} />
+            <Route path='/product-details/:productId' element={<ProductDetails />} />
           </Route>
         </Routes>
       </Router>

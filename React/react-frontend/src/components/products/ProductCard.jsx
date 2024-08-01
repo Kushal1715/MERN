@@ -8,9 +8,9 @@ const ProductCard = ({ image, name, price, id }) => {
         <img src={image} className="w-full h-[250px] mb-2" alt="" />
         <div className="mb-2">
           <h2>{name}</h2>
-          <p>{price}</p>
+          <p>{Math.ceil(price)}</p>
         </div>
-        <div>
+        <div className="flex">
           <Link className="btn btn-primary w-[150px] mr-2">Button1</Link>
           <Link
             to={`/product-details/${id}`}

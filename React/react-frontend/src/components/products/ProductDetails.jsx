@@ -1,8 +1,10 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import { FaCartShopping } from "react-icons/fa6";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
@@ -93,17 +95,24 @@ const ProductDetails = () => {
   //     .catch((e) => console.log(e));
   // }, [productId, product.category]);
 
-  const handleAddtoCart = () => {
-    const data = JSON.parse(localStorage.getItem("cartData")) ?? [];
+  const handleAddtoCart = (name) => {
+    const data = JSON.parse(localStorage.getItem("cartData")) ?? []; //null or undefined : nullish collescing operator
     const found = data.find((prod) => prod.id === product.id);
     if (found) {
       found.quantity += 1;
+
+      toast(`${name} x${found.quantity} is added to cart `, {
+        position: "top-center",
+      });
     } else {
       data.push({ ...product, quantity: 1 });
+
+      toast(`${name} x1 is added to cart`, {
+        position: "top-center",
+      });
     }
     localStorage.setItem("cartData", JSON.stringify(data));
     setCartItems(data);
-    alert("Item is added to cart");
   };
 
   if (error) {
@@ -124,6 +133,8 @@ const ProductDetails = () => {
 
   return (
     <>
+      {/* {showToast && <Toast product={toastMsg} quantity={quantity} />} */}
+      <ToastContainer />
       <div className="p-[150px] pt-11">
         <Link to="/cart">
           <div className="flex justify-end cursor-pointer">
@@ -156,7 +167,7 @@ const ProductDetails = () => {
               />
               <button
                 className="border-2 px-3 py-[10px] bg-orange-500"
-                onClick={handleAddtoCart}
+                onClick={() => handleAddtoCart(product.title)}
               >
                 Add to Cart
               </button>

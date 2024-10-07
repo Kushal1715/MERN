@@ -3,12 +3,16 @@ const Product = require('../models/productMode');
 
 //to post products
 exports.postProduct = async (req, res) => {
+  //to check if file is not choosen
+  if (!req.file) {
+    return res.status(400).json({ error: 'product image is required' })
+  }
   let product = new Product({
     product_name: req.body.product_name,
     product_price: req.body.product_price,
     countInStock: req.body.countInStock,
     product_description: req.body.product_description,
-    product_image: req.body.product_image,
+    product_image: req.file.path,  //public/uploads/image.jpg
     category: req.body.category
   })
   product = await product.save()
